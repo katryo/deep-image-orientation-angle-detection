@@ -14,7 +14,7 @@ def preprocess(model_name, image_path):
     else:
         image_size = 299
 
-    img = Image.open(image_path)
+    img = Image.open(image_path).convert("RGB")
     img = img.resize((image_size, image_size))
     img = np.array(img)
     
